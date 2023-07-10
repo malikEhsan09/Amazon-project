@@ -79,7 +79,16 @@ forEach((button)=>{
         productId : productId,
         quantity : 1
     });
- } 
-    console.log(cart)
-  })
+ }
+ 
+ let cartQuantity = 0;
+ cart.forEach((items)=>{
+    cartQuantity = cartQuantity + items.quantity
+ });
+
+ document.querySelector('.js-cart-quantity')
+ .innerHTML = cartQuantity;
 })
+})
+
+
